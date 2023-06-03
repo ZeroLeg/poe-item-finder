@@ -1,0 +1,35 @@
+### Esta peticion nos devuelve como 'id' la query que podemos gastar para buscar en path of exile, el 'result' nos devuelve la query que podemos gastar en la siguiente peticion
+POST https://www.pathofexile.com/api/trade/search/Standard HTTP/1.1
+content-type: application/json
+
+{
+  "query": {
+    "filters": {
+      "trade_filters": {
+        "disabled": false,
+        "filters": {
+          "price": {
+            "min": 1,
+            "max": 300
+          }
+        }
+      }
+    },
+    "status": {
+      "option": "online"
+    },
+    "stats": [
+      {
+        "type": "and",
+        "filters": []
+      }
+    ],
+    "name": "Shavronne's Wrappings",
+    "type": "Occultist's Vestment"
+  },
+  "sort": {
+    "price": "asc"
+  }
+}
+### Nos devuelve la lista de items https://www.pathofexile.com/api/trade/fetch/{query(el result de la peticion anterior)}?query=id
+GET https://www.pathofexile.com/api/trade/fetch/171c6d4348e4890ae2d4175d501f3863fe901255740ad0f4c0822c25f0ff05a3?query=id
