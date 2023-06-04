@@ -1,5 +1,5 @@
 ### Esta peticion nos devuelve como 'id' la query que podemos gastar para buscar en path of exile, el 'result' nos devuelve la query que podemos gastar en la siguiente peticion
-POST https://www.pathofexile.com/api/trade/search/Standard HTTP/1.1
+POST https://www.pathofexile.com/api/trade/search/Crucible HTTP/1.1
 content-type: application/json
 
 {

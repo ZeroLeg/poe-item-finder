@@ -4,9 +4,9 @@ const apiUrl: String = import.meta.env.VITE_API_URL
 const league: String = import.meta.env.VITE_LEAGUE
 const tradeUrl: String = import.meta.env.VITE_TRADE_URL
 
-export const getTradeSeachQuery = async (query: any) => {
-  const res = await post(`${apiUrl}${tradeUrl}/search/${league}`, query)
-  return res
+export const getTradeSeachQuery = (query: Object) => {
+  const response = post(`${apiUrl}${tradeUrl}/search/${league}`, query)
+  return response
 }
 
 export const getIdFromSeachQuery = (json: any) => {
